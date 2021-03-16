@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.author {
+  font-family: roboto, sans-serif;
+}
+
+.instructions {
+  font-family: roboto, sans-serif;
+}
+
+.instructions::before {
+  content: "Instructions: ";
+  font-weight: 600;
+}
+
+.back-container {
+  margin: 10px;
+}
+
+.live-demos {
+  margin: 10px;
+  display: flex;
+}
+
+.live-demo-container {
+  margin: 10px;
+}
+
+.back-link {
+  text-decoration: none;
+  color: black;
+  font-family: roboto, sans-serif;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 150ms background-color;
+}
+
+.back-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,26 @@
+.links {
+  background-color: #333;
+  display: flex;
+  height: var(--links-container-height);
+}
+
+.link {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  text-decoration: none;
+  font-family: roboto, sans-serif;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 2px;
+
+  transition: 150ms background-color ease-in-out;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.link.active {
+  background-color: white;
+  color: black;
+}
