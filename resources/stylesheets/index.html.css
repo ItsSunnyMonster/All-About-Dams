@@ -43,6 +43,19 @@ body {
   transition: 150ms background-color ease-in-out;
 }
 
-.redirect-button:hover {
+.redirect-button:hover,
+.redirect-button:focus {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.secret-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.secret-btn:not(:focus) {
+  clip: rect(0px, 0px, 0px, 0px);
+  overflow: hidden;
+  padding: 0;
 }

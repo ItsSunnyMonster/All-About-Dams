@@ -4,10 +4,13 @@ body {
 
 .author {
   font-family: roboto, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .instructions {
   font-family: roboto, sans-serif;
+  text-align: center;
 }
 
 .instructions::before {
@@ -22,10 +25,27 @@ body {
 .live-demos {
   margin: 10px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .live-demo-container {
+  max-width: 500px;
+  min-width: 485px;
+  padding: 10px;
   margin: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: #494949 0 0 10px;
+  border-radius: 10px;
+
+  transition: 300ms box-shadow;
+}
+
+.live-demo-container:hover {
+  box-shadow: #000000 0 0 15px;
 }
 
 .back-link {

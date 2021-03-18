@@ -1,3 +1,8 @@
 body {
   margin: 0;
 }
+
+.background {
+  width: 100vw;
+  height: calc(100vh - var(--links-container-height));
+}
