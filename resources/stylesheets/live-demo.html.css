@@ -21,7 +21,6 @@ body {
 .live-demos {
   margin: 10px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -42,4 +41,10 @@ body {
 
 .live-demo-container:hover {
   box-shadow: #000000 0 0 15px;
+}
+
+@media (min-width: 520px) {
+  .live-demos {
+    justify-content: center;
+  }
 }
