@@ -1,4 +1,4 @@
-var secretButton = document.querySelector(".secret-btn");
+var secretButton = document.querySelector("[data-secret-btn]");
 
 secretButton.addEventListener("click", () => {
   document.title = "Did you notice that I was changed? ";

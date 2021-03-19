@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/resources/stylesheets/index.html.css" />
     <link rel="stylesheet" href="/resources/stylesheets/nav-bar.css" />
-    <script src="resources/scripts/secret-button.js" defer></script>
+    <script src="/resources/scripts/secret-button.js" defer></script>
+    <script src="/resources/scripts/date-checker.js" defer></script>
     <title>Home | All About Dams</title>
   </head>
   <body>
@@ -14,19 +15,26 @@
       <a href="/index.html" class="link active">Home</a>
       <a href="/about.html" class="link">About</a>
     </nav>
-    <button class="secret-btn">
+    <button class="secret-btn" data-secret-btn>
       Oh. You found a secret button. Click it or press Enter to see what
       happens.
     </button>
-    <div class="home-container">
-      <h1 class="title">All About Dams</h1>
-      <div class="button-container">
-        <a href="#how-does-dams-work">
-          <button class="redirect-button">How do dams work?</button>
-        </a>
-        <a href="/pages/live-demo.html">
-          <button class="redirect-button">Live Demo</button>
-        </a>
+    <div class="page-container">
+      <div class="home-container">
+        <h1 class="title">All About Dams</h1>
+        <div class="button-container">
+          <a href="/pages/how-do-dams-work.html">
+            <button class="redirect-button" data-easter-egg>
+              How do dams work?
+            </button>
+          </a>
+          <a href="/pages/live-demo.html">
+            <button class="redirect-button">Live Demo</button>
+          </a>
+        </div>
+      </div>
+      <div class="img-container">
+        <img src="/resources/images/title-img.jpg" class="home-img" />
       </div>
     </div>
   </body>

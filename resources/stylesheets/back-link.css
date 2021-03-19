@@ -1,0 +1,17 @@
+.back-container {
+  margin: 10px;
+}
+
+.back-link {
+  text-decoration: none;
+  color: black;
+  font-family: roboto, sans-serif;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 150ms background-color;
+}
+
+.back-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

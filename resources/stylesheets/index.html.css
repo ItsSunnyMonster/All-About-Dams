@@ -6,24 +6,44 @@ body {
   margin: 0;
 }
 
+.page-container {
+  display: flex;
+  height: calc(100vh - var(--links-container-height));
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--links-container-height));
-  width: 100vw;
   justify-content: center;
+}
 
-  background-image: url(/resources/images/title-background.jpg);
-  background-position: 0px -300px;
+.img-container {
+  display: flex;
+  align-items: center;
+}
+
+.home-img {
+  height: auto;
+  width: auto;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px black;
+  margin: 50px;
 }
 
 .title {
   margin: 0;
   text-align: center;
   font-family: roboto, sans-serif;
-  color: white;
+  color: black;
   font-weight: 300;
   font-size: 100px;
+  line-height: 1em;
+  margin-bottom: 50px;
 }
 
 .button-container {
@@ -34,10 +54,10 @@ body {
 .redirect-button {
   height: 40px;
   width: 100px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid black;
   border-radius: 5px;
-  color: white;
+  color: black;
   margin: 5px;
   cursor: pointer;
   transition: 150ms background-color ease-in-out;
@@ -45,7 +65,7 @@ body {
 
 .redirect-button:hover,
 .redirect-button:focus {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .secret-btn {
