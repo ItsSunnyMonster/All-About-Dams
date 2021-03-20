@@ -19,26 +19,197 @@
     <div class="center-container">
       <div class="img-container">
         <img src="/resources/images/dam.svg" class="img" />
-        <button class="test" data-target="#one">test</button>
+        <button
+          data-target="#reservoir-model"
+          class="model-btn"
+          style="top: 120px; left: 30px"
+        >
+          1
+        </button>
+        <button
+          class="model-btn"
+          style="top: 350px; left: 10px"
+          data-target="#intake-model"
+        >
+          2
+        </button>
+        <button
+          class="model-btn"
+          style="top: 350px; left: 70px"
+          data-target="#gate-model"
+        >
+          3
+        </button>
+        <button
+          class="model-btn"
+          style="top: 385px; left: 300px"
+          data-target="#penstock-model"
+        >
+          4
+        </button>
+        <button
+          class="model-btn"
+          style="top: 300px; left: 482px"
+          data-target="#turbine-model"
+        >
+          5
+        </button>
+        <button
+          class="model-btn"
+          style="top: 480px; left: 700px"
+          data-target="#outflow-model"
+        >
+          6
+        </button>
+        <button
+          class="model-btn"
+          style="top: 285px; left: 782px"
+          data-target="#transformer-model"
+        >
+          7
+        </button>
+        <button
+          class="model-btn"
+          style="top: 255px; left: 850px"
+          data-target="#powerlines-model"
+        >
+          8
+        </button>
+        <button class="help-btn" data-target="#help-model">?</button>
       </div>
     </div>
     <div id="overlay" data-overlay></div>
-    <div class="model" id="one">
+    <div class="model" id="reservoir-model">
       <div class="model-header">
-        <div class="title">Lorem.</div>
+        <div class="title">Reservoir</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body" style="display: flex; align-items: center">
+        <img
+          src="/resources/images/reservoir.jpg"
+          style="
+            height: auto;
+            width: auto;
+            max-width: 400px;
+            max-height: 400px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px black;
+          "
+        />
+        <p style="margin: 20px">
+          The reservoir (not reservior! ) of a dam is the higher part of the
+          river. It is blocked by the dam so that the dam can control when to
+          let go of the water to produce electricity.
+        </p>
+      </div>
+    </div>
+    <div class="model" id="intake-model">
+      <div class="model-header">
+        <div class="title">Intake</div>
         <button class="close-button" data-close-button>&times;</button>
       </div>
       <div class="model-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quo
-        optio explicabo quidem perferendis ducimus ipsa ex praesentium quaerat
-        enim, molestias quis! In dolorem aliquid pariatur minus suscipit
-        mollitia qui? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Voluptatem amet impedit obcaecati, voluptates eius, dolorem eaque
-        pariatur laborum nemo ullam error harum. Minima repellendus tempore
-        quibusdam voluptas odit modi natus. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Voluptas, aperiam modi aliquam quae,
-        tempora dolore laudantium quo repellat, cupiditate assumenda temporibus?
-        Quis rem, possimus veritatis ab incidunt recusandae earum laudantium!
+        The intake is where water is taken into the dam. Pretty simple, right?
+      </div>
+    </div>
+    <div class="model" id="gate-model">
+      <div class="model-header">
+        <div class="title">Gate</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body">
+        The gate opens to let water into the dam. Then the dam will be able to
+        produce electricity.
+      </div>
+    </div>
+    <div class="model" id="penstock-model">
+      <div class="model-header">
+        <div class="title">Penstock</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body" style="display: flex; align-items: center">
+        <img
+          src="/resources/images/penstock.jpg"
+          style="
+            height: auto;
+            width: auto;
+            max-height: 400px;
+            max-width: 400px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px black;
+          "
+        />
+        <p style="margin: 20px">
+          The picture is the penstock for Ohakuri Dam in New Zealand. The
+          penstock is the tube that allows water to flow to the turbine in the
+          powerhouse.
+        </p>
+      </div>
+    </div>
+    <div class="model" id="turbine-model">
+      <div class="model-header">
+        <div class="title">Powerhouse, Generator & Turbine</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body" style="display: flex; align-items: center">
+        <img
+          src="/resources/images/turbine-and-generator.jpg"
+          style="
+            height: auto;
+            width: auto;
+            max-height: 400px;
+            max-width: 400px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px black;
+          "
+        />
+        <p style="margin: 20px">
+          The powerhouse is where the electrical energy is produced. It contains
+          the turbine and the generator. The turbine spins when water flows
+          through, and the generator produces electricity from the spinning
+          motion of the turbine. Then some powerlines take the electricity and
+          plug it into the transformer.
+        </p>
+      </div>
+    </div>
+    <div class="model" id="outflow-model">
+      <div class="model-header">
+        <div class="title">Outflow</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body">
+        The outflow is where the water can carry on their journey to the sea
+        after doing humans a huge favour.
+      </div>
+    </div>
+    <div class="model" id="transformer-model">
+      <div class="model-header">
+        <div class="title">Transformer</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body">
+        The purpose of the transformer is to change the voltage of the produced
+        electricity to a usable voltage.
+      </div>
+    </div>
+    <div class="model" id="powerlines-model">
+      <div class="model-header">
+        <div class="title">Powerlines</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body">
+        Everyone know what powerlines do. They carry the produced, transformed
+        electricity to the houses of everyone.
+      </div>
+    </div>
+    <div class="model" id="help-model">
+      <div class="model-header">
+        <div class="title">Help</div>
+        <button class="close-button" data-close-button>&times;</button>
+      </div>
+      <div class="model-body">
+        The buttons on the picture corresponds to the components of the dam.
+        Click the buttons to find out more about the component.
       </div>
     </div>
   </body>
