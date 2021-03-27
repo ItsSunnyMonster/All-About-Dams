@@ -1,26 +1,204 @@
-.links {
-  background-color: #333;
-  display: flex;
-  height: var(--links-container-height);
+/* Uncomment following to restore old nav bar */
+
+/*.links {*/
+/*  background-color: #333;*/
+/*  display: flex;*/
+/*  height: var(--links-container-height);*/
+/*}*/
+
+/*.link {*/
+/*  background-color: rgba(255, 255, 255, 0);*/
+/*  color: white;*/
+/*  text-decoration: none;*/
+/*  font-family: roboto, sans-serif;*/
+/*  padding: 5px;*/
+/*  margin: 5px;*/
+/*  border-radius: 2px;*/
+
+/*  transition: 150ms background-color ease-in-out;*/
+/*}*/
+
+/*.link:hover {*/
+/*  background-color: rgba(255, 255, 255, 0.1);*/
+/*}*/
+
+/*.link.active {*/
+/*  background-color: white;*/
+/*  color: black;*/
+/*}*/
+
+/* (End) Uncomment above to restore old nav bar */
+
+/* comment following to disable new nav bar */
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+header {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  position: sticky;
+  top: 0;
+  background: var(--accent-colour);
+  box-shadow: 0 -10px 10px 10px black;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
 }
 
-.link {
-  background-color: rgba(255, 255, 255, 0);
+.logo {
+  color: black;
+  margin: 0;
+  padding: 20px;
+  user-select: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span:before,
+.nav-toggle-label span:after {
+  content: '';
+  display: block;
+  background: white;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 400ms;
+}
+
+.nav-toggle-label span:before {
+  transform: translateY(-6px);
+}
+
+.nav-toggle-label span:after {
+  transform: translateY(3px);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+  transform: rotate(45deg);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:before {
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+nav {
+  --border-radius: 20px;
+  position: absolute;
+  z-index: -999;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--accent-colour);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  box-shadow: 0 10px 10px -10px black;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  transition: transform 400ms ease-in-out;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  margin: 1em 0 0 1em;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+}
+
+nav a {
   color: white;
   text-decoration: none;
-  font-family: roboto, sans-serif;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 2px;
-
-  transition: 150ms background-color ease-in-out;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity, color 150ms ease-in-out;
 }
 
-.link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.link.active {
-  background-color: white;
+nav a:hover {
   color: black;
 }
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms, color 150ms ease-in-out;
+}
+
+@media screen and (min-width: 770px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(450px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a:before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover:before {
+    transform: scaleX(1);
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+}
+
+/* (End) comment above to disable new nav bar */

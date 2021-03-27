@@ -53,10 +53,10 @@ body {
   justify-content: space-between;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  background-color: green;
+  background-color: var(--accent-colour);
   align-items: center;
   color: white;
-  box-shadow: inset 0px 0px 10px rgb(112, 112, 112);
+  box-shadow: 0 0 10px rgb(112, 112, 112);
 }
 
 .close-button {

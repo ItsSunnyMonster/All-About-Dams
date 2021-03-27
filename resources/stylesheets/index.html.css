@@ -1,14 +1,19 @@
-:root {
-  --links-container-height: 39.2px;
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 
 .page-container {
   display: flex;
-  height: calc(100vh - var(--links-container-height));
+  flex: 1 1 auto;
   width: 100vw;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -31,19 +36,18 @@ body {
   max-width: 500px;
   max-height: 500px;
   border-radius: 50%;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0 0 10px black;
   margin: 50px;
 }
 
 .title {
-  margin: 0;
   text-align: center;
   font-family: roboto, sans-serif;
   color: black;
   font-weight: 300;
   font-size: 100px;
   line-height: 1em;
-  margin-bottom: 50px;
+  margin: 0 0 50px;
 }
 
 .button-container {
@@ -52,20 +56,45 @@ body {
 }
 
 .redirect-button {
+  position: relative;
   height: 40px;
-  width: 100px;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid black;
-  border-radius: 5px;
+  width: 200px;
+  font-size: 15px;
+  background-color: #e3e3e3;
+  border: none;
   color: black;
   margin: 5px;
   cursor: pointer;
-  transition: 150ms background-color ease-in-out;
+  z-index: 1;
+  transition: 300ms color ease-in-out;
 }
 
 .redirect-button:hover,
 .redirect-button:focus {
-  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.redirect-button:before {
+  content: '';
+  background-color: var(--accent-colour);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.redirect-button:hover:before,
+.redirect-button:focus:before {
+  transform: scaleX(1);
+}
+
+.redirect-button:hover,
+.redirect-button:focus {
 }
 
 .secret-btn {

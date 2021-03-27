@@ -6,13 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/resources/stylesheets/nav-bar.css" />
     <link rel="stylesheet" href="/resources/stylesheets/about.html.css" />
+    <link rel="stylesheet" href="/resources/stylesheets/global-vars.css">
     <title>About | All About Dams</title>
   </head>
   <body>
-    <nav class="links">
-      <a href="/index.html" class="link">Home</a>
-      <a href="/about.html" class="link active">About</a>
-    </nav>
+    <!--  uncomment following to restore old navbar  -->
+    <!--    <nav class="links">-->
+    <!--      <a href="/index.html" class="link active">Home</a>-->
+    <!--      <a href="/about.html" class="link">About</a>-->
+    <!--    </nav>-->
+    <!--  (End) uncomment above to restore old nav bar  -->
+    <!--  comment following to disable new nav bar  -->
+    <header>
+      <h1 class="logo">All About Dams</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <!--  (End) comment above to disable new nav bar  -->
     <h1 class="header">About</h1>
     <p class="about-body">
       All About Dams.

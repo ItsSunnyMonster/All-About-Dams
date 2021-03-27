@@ -6,15 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/resources/stylesheets/index.html.css" />
     <link rel="stylesheet" href="/resources/stylesheets/nav-bar.css" />
+    <link rel="stylesheet" href="resources/stylesheets/global-vars.css">
     <script src="/resources/scripts/secret-button.js" defer></script>
     <script src="/resources/scripts/date-checker.js" defer></script>
     <title>Home | All About Dams</title>
   </head>
   <body>
-    <nav class="links">
-      <a href="/index.html" class="link active">Home</a>
-      <a href="/about.html" class="link">About</a>
-    </nav>
+<!--  uncomment following to restore old navbar  -->
+<!--    <nav class="links">-->
+<!--      <a href="/index.html" class="link active">Home</a>-->
+<!--      <a href="/about.html" class="link">About</a>-->
+<!--    </nav>-->
+<!--  (End) uncomment above to restore old nav bar  -->
+<!--  comment following to disable new nav bar  -->
+    <header>
+      <h1 class="logo">All About Dams</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+<!--  (End) comment above to disable new nav bar  -->
     <button class="secret-btn" data-secret-btn>
       Oh. You found a secret button. Click it or press Enter to see what
       happens.
@@ -34,7 +52,7 @@
         </div>
       </div>
       <div class="img-container">
-        <img src="/resources/images/title-img.jpg" class="home-img" />
+        <img src="/resources/images/title-img.jpg" class="home-img"  alt="image of a dam"/>
       </div>
     </div>
   </body>
