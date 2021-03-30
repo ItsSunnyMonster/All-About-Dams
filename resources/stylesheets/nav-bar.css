@@ -133,7 +133,8 @@ nav a {
   transition: opacity, color 150ms ease-in-out;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   color: black;
 }
 
@@ -191,7 +192,8 @@ nav a:hover {
     transition: transform ease-in-out 250ms;
   }
 
-  nav a:hover:before {
+  nav a:hover::before,
+  nav a:focus::before {
     transform: scaleX(1);
   }
 
