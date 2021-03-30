@@ -55,6 +55,7 @@ body {
 .button-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .redirect-button {
@@ -115,9 +116,15 @@ body {
   padding: 0;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .home-img {
     width: 100vw;
     height: 100vw;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .button-container {
+    justify-content: unset;
   }
 }
