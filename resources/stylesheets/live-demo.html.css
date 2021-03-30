@@ -25,22 +25,17 @@ body {
 }
 
 .live-demo-container {
+  position: relative;
   max-width: 500px;
   min-width: 485px;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: #494949 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0 0 100px;
   border-radius: 10px;
-
-  transition: 300ms box-shadow;
-}
-
-.live-demo-container:hover {
-  box-shadow: #000000 0 0 15px;
 }
 
 @media (min-width: 520px) {
