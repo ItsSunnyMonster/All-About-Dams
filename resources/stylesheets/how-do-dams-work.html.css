@@ -13,8 +13,6 @@ body {
 .model-btn {
   position: absolute;
   opacity: 0.7;
-  width: 28.0833px;
-  height: 22.8px;
 }
 
 .model-btn:hover,
