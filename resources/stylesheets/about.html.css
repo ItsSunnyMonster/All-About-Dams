@@ -1,3 +1,7 @@
+:root {
+  --content-load-time: 500ms;
+}
+
 html {
   display: flex;
   flex-direction: column;
@@ -17,6 +21,44 @@ body {
   font-family: roboto, sans-serif;
 }
 
+.header {
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  margin: 0 0 25px;
+  border-bottom: 2px solid white;
+  animation: content-load var(--content-load-time) ease-in-out var(--header-load-time) backwards;
+}
+
+.about-body {
+  text-align: center;
+  line-height: 2em;
+  font-weight: 300;
+  font-size: 20px;
+  animation: content-load var(--content-load-time) ease-in-out calc(var(--header-load-time) + var(--content-load-time)) backwards;
+}
+
+.sign {
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: right;
+  margin-right: 15%;
+  animation: content-load var(--content-load-time) ease-in-out calc(var(--header-load-time) + var(--content-load-time)) backwards;
+}
+
+@keyframes content-load {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -27,31 +69,6 @@ body {
   100% {
     background-position: 0 50%;
   }
-}
-
-.header {
-  font-size: 100px;
-  font-weight: 300;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 25px;
-  margin: 0 0 25px;
-  border-bottom: 2px solid white;
-}
-
-.about-body {
-  text-align: center;
-  line-height: 2em;
-  font-weight: 300;
-  font-size: 20px;
-}
-
-.sign {
-  line-height: 1.5em;
-  font-weight: 300;
-  font-size: 15px;
-  text-align: right;
-  margin-right: 15%;
 }
 
 @media screen and (max-width: 1110px) {

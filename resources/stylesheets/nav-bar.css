@@ -32,6 +32,10 @@
 /* comment following to disable new nav bar */
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
 
+:root {
+  --header-load-time: 500ms;
+}
+
 header {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
@@ -42,6 +46,7 @@ header {
   text-align: center;
   z-index: 999;
   width: 100%;
+  animation: header-load var(--header-load-time) ease-in-out;
 }
 
 .logo {
@@ -145,6 +150,18 @@ nav a:focus {
 .nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms, color 150ms ease-in-out;
+}
+
+@keyframes header-load {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 770px) {

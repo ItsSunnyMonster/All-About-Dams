@@ -1,3 +1,7 @@
+:root {
+  --home-load-time: 1000ms;
+}
+
 html {
   display: flex;
   flex-direction: column;
@@ -26,11 +30,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: home-load var(--home-load-time) ease-in-out var(--header-load-time) backwards;
 }
 
 .img-container {
   display: flex;
   align-items: center;
+  animation: image-load var(--home-load-time) ease-in-out calc(var(--home-load-time) + var(--header-load-time)) backwards;
 }
 
 .home-img {
@@ -72,7 +78,7 @@ body {
   text-decoration: none;
   font-family: roboto, sans-serif;
   text-align: center;
-  padding: 15px;
+  padding: 1em;
   transition: 300ms color ease-in-out;
 }
 
@@ -111,6 +117,30 @@ body {
   clip: rect(0px, 0px, 0px, 0px);
   overflow: hidden;
   padding: 0;
+}
+
+@keyframes home-load {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes image-load {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 500px) {
