@@ -121,24 +121,20 @@ body {
 
 @keyframes home-load {
   0% {
-    transform: translateX(-300px);
     opacity: 0;
   }
 
   100% {
-    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes image-load {
   0% {
-    transform: translateX(300px);
     opacity: 0;
   }
 
   100% {
-    transform: translateX(0);
     opacity: 1;
   }
 }
