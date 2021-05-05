@@ -37,7 +37,7 @@
 }
 
 header {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 400;
   position: sticky;
   top: 0;
@@ -63,7 +63,7 @@ header {
 .nav-toggle-label span,
 .nav-toggle-label span:before,
 .nav-toggle-label span:after {
-  content: '';
+  content: "";
   display: block;
   background: white;
   height: 3px;
@@ -197,12 +197,12 @@ nav a:focus {
   }
 
   nav a:before {
-    content: '';
+    content: "";
     display: block;
     height: 5px;
     background: black;
     position: absolute;
-    top: -.75em;
+    top: -0.75em;
     left: 0;
     right: 0;
     transform: scaleX(0);
