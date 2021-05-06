@@ -115,6 +115,18 @@ body {
   padding: 0;
 }
 
+.secret-btn-2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.secret-btn-2:not(:focus) {
+  clip: rect(0px, 0px, 0px, 0px);
+  overflow: hidden;
+  padding: 0;
+}
+
 @keyframes home-load {
   0% {
     transform: translateX(-300px);
